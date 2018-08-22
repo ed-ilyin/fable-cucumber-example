@@ -1,4 +1,5 @@
 bin/
+node_modules/
 obj/
 paket-files/
 test/
