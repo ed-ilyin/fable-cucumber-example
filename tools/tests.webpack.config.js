@@ -1,6 +1,6 @@
 var CONFIG = {
     fsharpEntry: "./tests/Tests.fsproj",
-    outputDir: "../test",
+    outputDir: "../features/step_definitions",
     babel: {
         presets: [
             ["env", {
@@ -13,7 +13,7 @@ var CONFIG = {
 }
 var path = require("path");
 module.exports = {
-    entry: { tests: ["core-js", CONFIG.fsharpEntry] },
+    entry: { stepdefs: ["core-js", CONFIG.fsharpEntry] },
     output: {
         path: path.join(__dirname, CONFIG.outputDir),
         filename: '[name].js'
