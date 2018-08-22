@@ -1,6 +1,6 @@
 var CONFIG = {
     fsharpEntry: "./tests/Tests.fsproj",
-    outputDir: "./test",
+    outputDir: "../test",
     babel: {
         presets: [
             ["env", {

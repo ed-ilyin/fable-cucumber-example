@@ -4,8 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "fable-loader": "^2.0.0-alpha-003",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0"
+  },
+  "scripts": {
+    "postinstall": "dotnet restore",
+    "pretest": "rm -rf test",
+    "test": "cd tools && dotnet fable webpack -- --config tools/tests.webpack.config.js"
   }
 }
