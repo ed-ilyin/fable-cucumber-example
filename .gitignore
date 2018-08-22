@@ -1,0 +1,5 @@
+bin/
+obj/
+paket-files/
+test/
+yarn-error.log

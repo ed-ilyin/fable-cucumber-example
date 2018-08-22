@@ -1,0 +1,14 @@
+framework: netstandard2.0
+source https://api.nuget.org/v3/index.json
+storage: none
+
+nuget Fable.Core  prerelease
+nuget FSharp.Core
+
+group tools
+    framework: netstandard2.0
+    source https://api.nuget.org/v3/index.json
+    storage: none
+
+    clitool dotnet-fable prerelease
+    nuget FSharp.Core
