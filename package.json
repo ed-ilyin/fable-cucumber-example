@@ -5,6 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "fable-loader": "^2.0.0-alpha-003",
     "webpack": "^4.17.1",
@@ -12,7 +13,7 @@
   },
   "scripts": {
     "postinstall": "dotnet restore",
-    "pretest": "rm -rf test",
-    "test": "cd tools && dotnet fable webpack -- --config tools/tests.webpack.config.js"
+    "pretest": "rm -rf test && cd tools && dotnet fable webpack -- --config tools/tests.webpack.config.js",
+    "test": "node test/tests.js"
   }
 }
