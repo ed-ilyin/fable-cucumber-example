@@ -4,18 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@types/cucumber": "^4.0.4",
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "cucumber": "^4.2.1",
-    "fable-loader": "^2.0.0-alpha-003",
-    "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0"
+    "fable-splitter": "^2.0.0-alpha-003",
+    "fable-utils": "^1.0.6",
+    "gherkin": "^5.1.0"
   },
   "scripts": {
     "postinstall": "dotnet restore",
-    "pretest": "rm -rf features/step_definitions && cd tools && dotnet fable webpack -- --config tools/tests.webpack.config.js",
-    "test": "cucumber-js"
+    "pretest": "rm -rf .fable test && cd tools && dotnet fable fable-splitter -- --config tools/splitter.config.js",
+    "test": "node test/Cucumber.js"
   }
 }
